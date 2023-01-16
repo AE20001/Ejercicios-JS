@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponderador de notas</title>
+</head>
+<body> Ponderar notas
+    <form name="calculadora">
+        Primer nota 30% : <input type="text" name="valor1"><br>
+        Segunda nota 70% : <input type="text" name="valor2"><br>
+        <input type="button" name="button1" value="calcula" onclick="ponderar()">
+<br>
+        Resultado: <input type="text" name="resultado">
+
+    <script>
+        /*Ejercicio9:
+Realizar programa para una web, en el cual el usuario introduce 2 notas y su valor
+ponderado (como cuando un examen vale un 30% y otro examen el 70%).
+Pulsando el botón “Calcula”, la web muestra como resultado la nota media ponderada.*/
+
+function ponderar() {
+let num1, num2, res;
+num1 = parseFloat(document.calculadora.valor1.value);
+num2 = parseFloat(document.calculadora.valor2.value);
+res= (num1 * 0.3)+(num2*0.7)
+
+document.calculadora.resultado.value = res;
+}
+
+    </script>
+</body>
+
+</html>

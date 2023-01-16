@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aprobados y reprobados</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*7.	Elaborar un algoritmo para leer la nota de diez estudiantes y mostrar cantidad de aprobados y reprobados.*/
+
+        let aprobado= 0;
+        let reprobado = 0;
+
+        for (let f = 1; f <= 10; f++) {
+            let valor = parseInt(prompt('Ingrese la nota:'));
+            if (valor <= 5) {
+                reprobado++;
+            } else {
+                if (valor > 5) {
+                    aprobado++;
+                }
+            }
+
+        }
+
+        alert('La cantidad estudiantes aprobados son: '+aprobado+ '   Cantidad de estudiantes reprobados son: ' + reprobado);
+
+        document.write('La cantidad estudiantes aprobados son: '+aprobado+ '<br>');
+
+        document.write('    Cantidad de estudiantes reprobados son: ' + reprobado);
+
+    </script>
+
+</body>
+
+</html>     

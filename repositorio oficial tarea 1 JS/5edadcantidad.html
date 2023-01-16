@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mayores de edad</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        /*5.	Elaborar un algoritmo para leer la edad de 10 personas y mostrar cuantos son mayores de edad. */
+
+        let menoredad= 0;
+        let mayoredad = 0;
+
+        for (let f = 1; f <= 10; f++) {
+            let valor = parseInt(prompt('Ingrese un valor:'));
+            if (valor <= 17) {
+                menoredad++;
+            } else {
+                if (valor > 17) {
+                    mayoredad++;
+                }
+            }
+
+        }
+
+        alert('La cantidad de personas mayores de edad son: '+mayoredad);
+
+        document.write('Cantidad de personas mayores de edad:' + mayoredad);
+
+    </script>
+
+</body>
+
+</html>     

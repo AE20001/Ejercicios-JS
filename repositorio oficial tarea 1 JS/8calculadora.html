@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <form name="calculadora">
+        Primer número: <input type="text" name="valor1"><br><br>
+        Segundo número: <input type="text" name="valor2"><br><br>
+        <input type="button" name="button1" value="sumar" onclick="sumar()">
+        <input type="button" name="button2" value="restar" onclick="restar()">
+        <input type="button" name="button3" value="multiplicar" onclick="multiplicar()">
+        <input type="button" name="button4" value="dividir" onclick="dividir()"><br><br>
+        Resultado: <input type="text" name="resultado">
+        </form>
+</body>
+
+    <script>
+/**
+//*8.	Elabore un algoritmo con un menú simple con las cuatro operaciones básicas: sumar, restar, multiplicar, dividir.
+*/
+
+function sumar() {
+let num1, num2, res;
+num1 = parseFloat(document.calculadora.valor1.value);
+num2 = parseFloat(document.calculadora.valor2.value);
+res = num1 + num2;
+document.calculadora.resultado.value = res.toFixed(2);
+}
+function restar() {
+let num1, num2, res;
+num1 = parseFloat(document.calculadora.valor1.value);
+num2 = parseFloat(document.calculadora.valor2.value);
+res = num1 - num2;
+document.calculadora.resultado.value = res.toFixed(2);
+}
+function multiplicar() {
+let num1, num2, res;
+num1 = parseFloat(document.calculadora.valor1.value);
+num2 = parseFloat(document.calculadora.valor2.value);
+res = num1 * num2;
+document.calculadora.resultado.value = res.toFixed(2);
+}
+function dividir() {
+let num1, num2, res;
+num1 = parseFloat(document.calculadora.valor1.value);
+num2 = parseFloat(document.calculadora.valor2.value);
+res = num1 / num2;
+document.calculadora.resultado.value = res.toFixed(2);
+}
+
+    </script>
+
+</html>

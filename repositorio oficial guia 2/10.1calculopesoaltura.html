@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de peso</title>
+</head>
+<body>
+    <form action="" name="pesoideal">
+        <label for = "">Ingrese su edad:</label><br>
+        <input type="number" name="edad" id=""><br>
+        <label for = "">Ingrese su altura:</label><br>
+        <input type="number" name="altura" id=""><br>
+        <label for = "">Ingrese su sexo:</label><br>
+        <input type="text" name="sexo" id=""><br>
+        <label for = "">Ingrese su peso actual:</label><br>
+        <input type="number" name="pesoactual" id=""><br>
+        <input type="button" value="Calcular Peso" onclick="calcularpeso()"><br>
+        <label for = "">Resultado</label><br>
+        <input type="number" name="resultado" id=""><br>
+
+
+    </form>
+    <script>
+        /**Ejercicio 10:
+Crear una Fuction, en una pàgina web, donde el usuario introduce su altura (cm), edad, sexo
+y peso actual. El programa responde con una referencia de peso aproximado.
+Por ejemplo:
+Usuario introduce 176, 22, H, 79.
+El programa ejecuta la fórmula: 50 + ((Altura-150) / 4) *3 + (Edad – 20) /4 * (0.9 si es mujer)
+El resultado es: peso referencia = 70,5
+
+con decimales: en cajita y sin decimales en el aviso*/
+
+function calcularpeso(){
+    let edad, sexo, altura, pesoactual, resultado
+    sexo= document.pesoideal.sexo.value
+    edad= parseFloat(document.pesoideal.edad.value)
+
+    if(sexo=='Mujer'){
+        pesoactual= parseFloat(document.pesoideal.pesoactual.value)
+        altura= parseFloat(document.pesoideal.altura.value)
+        resultado= (pesoactual/(altura^2))*100
+        document.pesoideal.resultado.value =(resultado)
+
+        alert('Usted es '+sexo+ ' y su edad es: '+edad+ ', por lo tanto su peso referencia es: '+Math.round(resultado))
+
+    }else{
+        pesoactual= parseFloat(document.pesoideal.pesoactual.value)
+        altura= parseFloat(document.pesoideal.altura.value)
+        resultado= (pesoactual/(altura^2))*100
+        document.pesoideal.resultado.value =(resultado)
+
+        alert('Usted es '+sexo+ ' y su edad es: '+edad+ ', por lo tanto su peso referencia es: '+Math.round(resultado))
+    }
+
+}
+    </script>
+</body>
+</html>
